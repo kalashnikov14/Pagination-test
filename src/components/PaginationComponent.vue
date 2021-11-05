@@ -11,8 +11,9 @@
         forward
       </button>
     </div>
-    <p>{{ this.$store.state.itemsQuantity }}</p>
-    <p>{{ this.$store.state.pageItem }}</p>
+    <p>itemQuant: {{ this.$store.state.itemsQuantity }}</p>
+    <p>pageItem: {{ this.$store.state.pageItem }}</p>
+    <p>ItemsPerRow: {{ this.$store.state.itemsPerRow }}</p>
   </div>
 </template>
 

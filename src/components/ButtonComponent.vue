@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="item in this.$store.getters.getItems" :key="item.n">
+    <div v-for="item in getItems" :key="item.n">
       <div class="card">
         <h2 class="card-header">{{ item.name }}</h2>
         <p class="card-info">{{ item.text }}</p>
@@ -12,12 +12,16 @@
 
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {};
   },
 
-  computed: {},
+  computed: {
+    ...mapGetters(["getItems"]),
+  },
 };
 </script>
 
