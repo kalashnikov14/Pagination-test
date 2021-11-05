@@ -90,6 +90,7 @@ const store = new Vuex.Store({
                 state.itemsQuantity += state.itemsPerRow;
             }
         },
+
         prevPage(state){
             if(state.pageItem){
                 state.pageItem -= state.itemsPerRow;
@@ -100,6 +101,7 @@ const store = new Vuex.Store({
                 if(state.itemsQuantity < state.itemsPerRow){
                     state.itemsQuantity = state.itemsPerRow
                 }
+                
             }
         }
     },
