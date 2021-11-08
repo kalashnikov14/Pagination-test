@@ -14,6 +14,7 @@
     <p>itemQuant: {{ this.$store.state.itemsQuantity }}</p>
     <p>pageItem: {{ this.$store.state.pageItem }}</p>
     <p>ItemsPerRow: {{ this.$store.state.itemsPerRow }}</p>
+    <p>Arr length: {{ this.$store.state.items.length }}</p>
   </div>
 </template>
 

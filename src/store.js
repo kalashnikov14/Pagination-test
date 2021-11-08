@@ -85,10 +85,20 @@ const store = new Vuex.Store({
             
         },
         nextPage(state){
-            if(state.pageItem < state.items.length - state.itemsPerRow && state.itemsQuantity < state.items.length){
+            
+            if((state.pageItem < (state.items.length - state.itemsPerRow)) && state.itemsQuantity < state.items.length){
                 state.pageItem += state.itemsPerRow;
                 state.itemsQuantity += state.itemsPerRow;
+                console.log('test');
             }
+            if(state.itemsQuantity > state.items.length){
+                state.itemsQuantity = state.items.length
+                state.pageItem = state.items.length - state.itemsPerRow;
+            }
+            if(state.pageItem < 0){
+                state.pageItem = 0
+            }
+
         },
 
         prevPage(state){
@@ -101,6 +111,7 @@ const store = new Vuex.Store({
                 if(state.itemsQuantity < state.itemsPerRow){
                     state.itemsQuantity = state.itemsPerRow
                 }
+                
                 
             }
         }
